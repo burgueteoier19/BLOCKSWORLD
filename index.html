@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo Minecraft</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="overlay">
+  <h1>MUNDO MINECRAFT</h1>
+  <p style="margin-bottom:20px;opacity:0.6;">Elige modo de juego</p>
+  <div style="display:flex;gap:16px;">
+    <button id="btn-survival" style="
+      background:#8B3A3A;border:2px solid #c05050;color:white;
+      font-family:'Courier New',monospace;font-size:14px;letter-spacing:2px;
+      padding:12px 24px;border-radius:6px;cursor:pointer;">
+      ❤ SUPERVIVENCIA
+    </button>
+    <button id="btn-creative" style="
+      background:#2a5a8a;border:2px solid #4090cc;color:white;
+      font-family:'Courier New',monospace;font-size:14px;letter-spacing:2px;
+      padding:12px 24px;border-radius:6px;cursor:pointer;">
+      ✦ CREATIVO
+    </button>
+  </div>
+  <p id="mode-label" style="margin-top:14px;font-size:11px;opacity:0.5;font-family:'Courier New',monospace;"></p>
+</div>
+
+<div id="crosshair">+</div>
+
+<div id="hud">
+  <div id="pos">Pos: 0, 0, 0</div>
+  <div id="fps">FPS: --</div>
+  <div id="mode-badge" style="font-size:11px;margin-top:2px;"></div>
+  <div id="block-name"></div>
+  <div id="chunk-info" style="font-size:10px;opacity:0.5;"></div>
+  <div style="font-size:11px;opacity:0.6;margin-top:2px;">
+    Izq: romper | Der: colocar<br>E: inventario | 1-9/rueda: bloque
+  </div>
+</div>
+
+<div id="controls-hint">
+  WASD: moverse &nbsp;|&nbsp;
+  <span id="hint-jump">ESPACIO: saltar</span> &nbsp;|&nbsp;
+  Izq: romper &nbsp;|&nbsp; Der: colocar &nbsp;|&nbsp;
+  E: inventario &nbsp;|&nbsp; ESC: pausa
+</div>
+
+<script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.128.0/build/three.module.js"
+    }
+  }
+</script>
+
+<script type="module" src="js/main.js"></script>
+
+</body>
+</html>
